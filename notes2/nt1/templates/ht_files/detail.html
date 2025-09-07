@@ -1,0 +1,37 @@
+{% extends "ht_files/homepage.html "%}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+
+                <div class="card mt-5 shadow">
+                    <div class="card-body">
+                        <div class="card-title fs-5 text-muted">
+                            {{note_data.title}}
+                        </div>
+                        <div class="card-text">
+                            {{note_data.text}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div >
+                    <form action="" class="form-control mt-5" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" class="btn btn-outline-primary " value="update">
+
+                        
+                    </form>
+                </div>
+                <a href="{%  url 'delete' %}" class="btn btn-outline-primary mt-5">delete</a>
+            </div>
+        </div>
+    </div>
+    
+    
+
+{% endblock %}

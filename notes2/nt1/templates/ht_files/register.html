@@ -1,0 +1,24 @@
+{% extends "ht_files/homepage.html "%}
+
+{% block content %}
+<h1>register</h1>
+    <center>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="row">
+                <div class="col-12">
+                    <button  class="btn btn-outline-primary mt-5 btn-lg rounded-pill " style="width: 200px;" type="submit"> Register </button>  
+                </div>
+                <div class="col-12">
+                    <a href="{% url 'home'%}" class="btn btn-outline-primary mt-5 btn-lg rounded-pill " style="width: 200px;"  > home </a>
+
+                </div>
+                               
+            </div>
+           
+        </form>
+        
+    </center>
+
+{% endblock %}

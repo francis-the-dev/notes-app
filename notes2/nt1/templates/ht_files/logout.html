@@ -1,0 +1,14 @@
+{% extends "ht_files/homepage.html "%}
+
+{% block content %}
+
+<h1>Logout page</h1>
+
+<center>
+   <h1>you are logged out </h1>
+   <a href="{% url 'login' %}">login</a>
+   <a href="{% url 'register' %}">register</a>
+   <a href="{% url 'home' %}">Home</a>
+</center>
+
+{% endblock %}
